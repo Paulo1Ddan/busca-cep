@@ -11,8 +11,8 @@
             <div wire:loading wire:target="data.zipcode">
                 Bucando CEP
             </div>
-            @if ($teste != '')
-                <p class="erro-zipcode">{{$teste}}</p>
+            @if(isset($data['teste']))
+                <p class="erro-zipcode">{{$data['teste']}}</p>
             @endif
             @error('data.zipcode')
                 <p class="erro-zipcode">{{ $message }}</p>	
